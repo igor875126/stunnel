@@ -10,7 +10,7 @@ services:
     environment:
       # Use to create reverese tunnels (multiple if you want)
       # 2222 will be opened on you JUMP SERVER 50022 will be forwarded to 2222
-      - SSH_ARGS=ssh -R 2222:localhost:50022 -R 8000:localhost:6556
+      - SSH_ARGS=-R 2222:localhost:50022 -R 8000:localhost:6556
     volumes:
       - ./ssh-key/id_rsa:/root/.ssh/id_rsa:ro
       - ./ssh-key/id_rsa.pub:/root/.ssh/id_rsa.pub:ro
